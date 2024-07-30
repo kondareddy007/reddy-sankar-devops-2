@@ -25,6 +25,10 @@ in this case, we are using /opt is our working directory for Ansible.
    ```
 
 1. Test the connection  
-   ```sh
    ansible -i hosts all -m ping 
-   ```
+2. Run the play book
+ansible-playbook -i hosts jenkins-master-setup.yaml
+ 3. Check the syntax
+ ansible-playbook -i hosts jenkins-master-setup.yaml --check
+ 4. Check the jenkins status in ubuntu
+ service jenkins status
