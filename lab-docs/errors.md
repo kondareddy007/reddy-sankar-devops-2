@@ -13,4 +13,7 @@ Solution: I provided state is "Unstalled" so i got above error. After i changed 
    Solution: removed write permission to dpo.pem file. Now no error
    #chmod 400 dpo.pem
 
-   
+4) How to fix Terraform 'acquiring the state lock' error
+planing to destroy the server but getting above error. I run below commands and solve the problem. I kill the terrraform destroy ID.
+ps aux | grep terraform
+kill -9 <terraform destroy ID>
