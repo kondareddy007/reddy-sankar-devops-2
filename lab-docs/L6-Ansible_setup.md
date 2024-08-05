@@ -1,6 +1,7 @@
 
 # Setup Ansible
 1. Install ansibe on Ubuntu 22.04 
+
    sudo apt update
    sudo apt install software-properties-common
    sudo add-apt-repository --yes --update ppa:ansible/ansible
