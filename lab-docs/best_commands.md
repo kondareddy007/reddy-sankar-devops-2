@@ -18,6 +18,12 @@ JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
 export $PATH
 
+#find / -name java-17*
+or #find / -name jvm ---> to find the jdk location
+Java 11:
+-------
+#sudo apt update
+#sudo apt install openjdk-11-jdk
+#update-java-alternatives --list  ---> List of java versions
+#sudo update-alternatives --config java -->select java number and press enter
 
-find / -name java-17*
-or find / -name jvm ---> to find the jdk location
