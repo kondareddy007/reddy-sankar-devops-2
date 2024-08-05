@@ -1,19 +1,23 @@
 ### Create an account at https://sonarcloud.io
-### Generate authentication token on sonarqube
+1) Generate authentication token on sonarqube
 Ans) sonarcloud->my account->security-> generate token and copy 
-###Create credential for token in jenkins00
+
+2)Create credential for token in jenkins00
 Ans) Manage jenkins->credentials->global credentilas-
 kind- secret text
 secret -> paste the sonarqube token
 id ->sonarqube-tokens
 description-->
-###Download "sonarqube scanner" plugin on jenkins
-###configure sonarqube server
+
+3)Download "sonarqube scanner" plugin on jenkins
+
+4)configure sonarqube server
 manage jenkins-> system-> sonar installation-> 
 Name ->sonarqube-server
 server url-> https://sonarcloud.io/
 server authenticaton token --> paste here
-###Add sonarqube scanner to jenkins
+
+5)Add sonarqube scanner to jenkins
 Ans) Manage jenkins->tools->sonar scanner->
     name=SonarScanner
     installed automatically
