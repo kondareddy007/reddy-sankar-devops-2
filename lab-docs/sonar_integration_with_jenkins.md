@@ -2,7 +2,7 @@
 1) Generate authentication token on sonarqube
 Ans) sonarcloud->my account->security-> generate token and copy 
 
-2)Create credential for token in jenkins00
+2)Create credential for token in jenkins
 Ans) Manage jenkins->credentials->global credentilas-
 kind- secret text
 secret -> paste the sonarqube token
