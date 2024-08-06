@@ -1,0 +1,32 @@
+---
+- hosts: jenkins-slave
+  become: true
+  tasks:
+  - name: install openjdk-17-jre
+    apt:
+      name: openjdk-17-jre
+      state: present
+
+  - name: Download maven packages
+    get_url:
+      url: https://dlcdn.apache.org/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.tar.gz
+      dest: /opt
+
+  - name: Extract packages
+    unarchive:
+      src: /opt/apache-maven-3.9.8-bin.tar.gz
+      dest: /opt
+      remote_src: yes
+
+  - name: Install docker
+    apt:
+      name: docker
+      state: present
+
+  - name: Start docker service
+    service: 
+      name: docker
+      state: started
+
+# - name: give 777 permissin to /var/run/docker.sock  
+      
