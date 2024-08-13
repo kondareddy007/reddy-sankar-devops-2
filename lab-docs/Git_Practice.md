@@ -20,3 +20,4 @@ changes be present then use the soft attribute else if you do want the commit al
 changes then use the hard attribute
 git reset --soft HEAD~1 (undo with changes preserved)
 git reset --hard HEAD~1 (undo with changes removed)
+
