@@ -52,7 +52,7 @@ resource "aws_vpc" "dpw-vpc" {
         }
 }
 
-//Create a Subnet-01 
+//Create a Subnet 
 resource "aws_subnet" "dpw-public_subent_01" {
     vpc_id = aws_vpc.dpw-vpc.id
     cidr_block = "10.1.1.0/24"
@@ -62,11 +62,10 @@ resource "aws_subnet" "dpw-public_subent_01" {
       Name = "dpw-public_subent_01"
     }
 }
-
-//Create extra  Subnet-02 
+//Create extra Subnet 
 resource "aws_subnet" "dpw-public_subent_02" {
     vpc_id = aws_vpc.dpw-vpc.id
-    cidr_block = "10.1.1.0/24"
+    cidr_block = "10.1.2.0/24"
     map_public_ip_on_launch = "true"
     availability_zone = "us-east-1b"
     tags = {
