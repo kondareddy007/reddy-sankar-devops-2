@@ -153,9 +153,9 @@ resource "aws_eks_node_group" "backend" {
   labels =  tomap({env = "dev"})
   
   scaling_config {
-    desired_size = 0
-    max_size     = 2
-    min_size     = 0
+    desired_size = 2
+    max_size     = 3
+    min_size     = 1
   }
 
   update_config {
