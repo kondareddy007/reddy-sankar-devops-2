@@ -1,0 +1,6 @@
+Namespace:- namespace is a logical group. if you want to deployed Multiple applications  in same cluster, We can use namepsace concept.
+#kubectl get nodes -->we can see all available nodes
+#kubectl get ns --> default namespace
+#kubectl apply -f namepsace.yaml --> to run namepsace yaml
+#kubectl get ns --> now valaxy namespace is added in default namespace.
+#kubectl apply -f deployment.yaml -->run the deploymnet yaml file
