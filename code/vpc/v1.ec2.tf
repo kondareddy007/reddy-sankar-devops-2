@@ -3,9 +3,12 @@ provider "aws" {
 }
 
 resource "aws_instance" "demo-server" {
-    ami = "ami-04a81a99f5ec58529"
-    instance_type = "t2.micro"
-    key_name = "dpo"
+    //ami = "ami-04a81a99f5ec58529"
+    ami = var.ami
+    //instance_type = "t2.micro"
+    instance_type = var.instance_type
+    //key_name = "dpo"
+    key_name = var.key-name
     vpc_security_group_ids = [ aws_security_group.demo-sg.id]
     subnet_id = aws_subnet.dpw-public_subent_01.id
     for_each = toset(["jenkins-master", "jenkins-slave", "Ansible"])
@@ -46,7 +49,8 @@ resource "aws_security_group" "demo-sg" {
 }
 //VPC Creation
 resource "aws_vpc" "dpw-vpc" {
-          cidr_block = "10.1.0.0/16"
+          //cidr_block = "10.1.0.0/16"
+          cidr_block = var.vpc_cidr
           tags = {
            Name = "dpw-vpc"
         }
@@ -55,7 +59,8 @@ resource "aws_vpc" "dpw-vpc" {
 //Create a Subnet 
 resource "aws_subnet" "dpw-public_subent_01" {
     vpc_id = aws_vpc.dpw-vpc.id
-    cidr_block = "10.1.1.0/24"
+    //cidr_block = "10.1.1.0/24"
+    cidr_block = var.subnet_cidr
     map_public_ip_on_launch = "true"
     availability_zone = "us-east-1a"
     tags = {
