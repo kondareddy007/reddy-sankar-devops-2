@@ -13,8 +13,8 @@ resource "aws_instance" "demo-server" {
     subnet_id = aws_subnet.dpw-public_subent_01.id
     /* for_each = toset(["jenkins-master", "jenkins-slave", "Ansible"])
    tags = {
-     Name = "${each.key}" */
-   }
+     Name = "${each.key}" 
+   }*/
 }
  
 resource "aws_security_group" "demo-sg" {
