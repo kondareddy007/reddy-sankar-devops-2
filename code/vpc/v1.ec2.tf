@@ -106,10 +106,10 @@ resource "aws_route_table_association" "dpw-rta-public-subent-01" {
 }
 
 // Associate subnet-02 with route table
-resource "aws_route_table_association" "dpw-rta-public-subent-02" {
+/* resource "aws_route_table_association" "dpw-rta-public-subent-02" {
     subnet_id = aws_subnet.dpw-public_subent_02.id
     route_table_id = aws_route_table.dpw-public-rt.id
-}
+} */
 
 /*module "sgs" {
     source = "../sg_eks"
