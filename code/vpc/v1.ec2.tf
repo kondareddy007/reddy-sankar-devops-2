@@ -5,15 +5,15 @@ provider "aws" {
 resource "aws_instance" "demo-server" {
     ami = "ami-0e86e20dae9224db8"
     //ami = var.ami
-    instance_type = "t2.micro"
+    instance_type = "t2.small"
     //instance_type = var.instance_type
     key_name = "dpo"
     //key_name = var.key-name
     vpc_security_group_ids = [ aws_security_group.demo-sg.id]
     subnet_id = aws_subnet.dpw-public_subent_01.id
-    for_each = toset(["jenkins-master", "jenkins-slave", "Ansible"])
+    /* for_each = toset(["jenkins-master", "jenkins-slave", "Ansible"])
    tags = {
-     Name = "${each.key}"
+     Name = "${each.key}" */
    }
 }
  

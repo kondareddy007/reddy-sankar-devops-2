@@ -1,4 +1,4 @@
-variable "ami" {
+/* variable "ami" {
     default = "ami-0b0dcb5067f052a63"  
 }
 
@@ -16,4 +16,4 @@ variable "vpc_cidr" {
 
 variable "subnet_cidr" {
     default = "10.1.1.0/24"
-}
+} */
